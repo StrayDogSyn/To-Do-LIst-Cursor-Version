@@ -1,6 +1,6 @@
 # ✨ StrayDog Todo List Application
 
-A sophisticated, full-stack todo list application featuring a stunning black and gold theme, modern animations, and a responsive design. Built with React, Node.js, and MongoDB, this application demonstrates professional-grade UI/UX with smooth transitions and interactive elements.
+A sophisticated, full-stack todo list application featuring a stunning black and gold theme, modern animations, and a responsive design. Built with React, Node.js, and MongoDB, this application allows users to manage their tasks efficiently with features like task creation, filtering, and sorting.
 
 ![StrayDog Todo List Banner](./frontend/src/assets/app-preview.png)
 
@@ -50,42 +50,38 @@ A sophisticated, full-stack todo list application featuring a stunning black and
 
 ```text
 ├── backend/
-│   ├── src/
-│   │   ├── config/
-│   │   │   └── db.ts
-│   │   ├── controllers/
-│   │   │   └── taskController.ts
-│   │   ├── models/
-│   │   │   └── task.ts
-│   │   ├── routes/
-│   │   │   └── api.ts
-│   │   ├── types/
-│   │   │   └── task.ts
-│   │   ├── utils/
-│   │   │   └── logger.ts
-│   │   └── server.ts
+│   ├── config/
+│   │   └── db.js
+│   ├── controllers/
+│   │   └── taskController.js
+│   ├── models/
+│   │   └── task.js
+│   ├── routes/
+│   │   └── api.js
+│   ├── utils/
+│   │   └── logger.js
+│   └── server.js
 │   ├── .env
-│   ├── tsconfig.json
-│   └── package.json
+│   ├── package.json
 │
 ├── frontend/
 │   ├── src/
 │   │   ├── components/
 │   │   │   ├── Task/
-│   │   │   │   ├── TaskForm.tsx
-│   │   │   │   ├── TaskItem.tsx
-│   │   │   │   └── TaskList.tsx
+│   │   │   │   ├── TaskForm.jsx
+│   │   │   │   ├── TaskItem.jsx
+│   │   │   │   └── TaskList.jsx
 │   │   │   ├── Filter/
-│   │   │   │   └── FilterBar.tsx
+│   │   │   │   └── FilterBar.jsx
 │   │   │   ├── Layout/
-│   │   │   │   └── Footer.tsx
+│   │   │   │   └── Footer.jsx
 │   │   │   └── Header/
-│   │   │       └── Header.tsx
+│   │   │       └── Header.jsx
 │   │   ├── hooks/
-│   │   │   ├── useDebounce.ts
-│   │   │   └── useLocalStorage.ts
+│   │   │   ├── useDebounce.js
+│   │   │   └── useLocalStorage.js
 │   │   ├── services/
-│   │   │   └── taskService.ts
+│   │   │   └── taskService.js
 │   │   ├── styles/
 │   │   │   ├── components/
 │   │   │   │   ├── Task.css
@@ -94,20 +90,19 @@ A sophisticated, full-stack todo list application featuring a stunning black and
 │   │   │   │   └── Header.css
 │   │   │   └── index.css
 │   │   ├── utils/
-│   │   │   └── api.ts
-│   │   ├── App.tsx
-│   │   ├── index.tsx
-│   │   ├── setupTests.ts
+│   │   │   └── api.js
+│   │   ├── App.jsx
+│   │   ├── index.jsx
+│   │   ├── setupTests.js
 │   │   └── tests/
-│   │       └── setupTests.ts
+│   │       └── setupTests.js
 │   ├── public/
 │   │   ├── index.html
 │   │   └── manifest.json
 │   ├── .env
-│   ├── tsconfig.json
+│   ├── package.json
 │   ├── tailwind.config.js
 │   ├── postcss.config.js
-│   └── package.json
 │
 ├── .gitignore
 └── README.md
@@ -122,19 +117,21 @@ A sophisticated, full-stack todo list application featuring a stunning black and
 ### Frontend
 
 - **React** - UI library
-- **TypeScript** - Type-safe JavaScript
+- **JavaScript** - Programming language
 - **Tailwind CSS** - Styling and animations
 - **Axios** - API requests
 - **React Icons** - Icon library
+- **React Router** - For routing
 
 ### Backend
 
 - **Node.js** - Runtime environment
 - **Express** - Web framework
-- **TypeScript** - Type-safe JavaScript
+- **JavaScript** - Programming language
 - **MongoDB** - Database
 - **Mongoose** - ODM
 - **JWT** - Authentication
+- **Cors** - For handling cross-origin requests
 
 ## 📦 Installation & Setup
 
@@ -148,8 +145,9 @@ A sophisticated, full-stack todo list application featuring a stunning black and
 
 1. Clone the repository:
 
+[Clone the repository](https://github.com/StrayDogSyn/To-Do-LIst-Cursor-Version.git)
 ```bash
-git clone https://github.com/StrayDogSyn/full-stack-ToDoList-Hunter.git
+git clone https://github.com/StrayDogSyn/To-Do-LIst-Cursor-Version.git
 cd full-stack-ToDoList-Hunter
 ```
 
@@ -160,10 +158,10 @@ cd backend
 npm install
 ```
 
-1. Create a .env file:
+1. Create a .env file (replace `your_mongodb_uri` with your actual MongoDB URI):
 
 ```env
-MONGODB_URI=your_mongodb_uri
+MONGODB_URI=mongodb+srv://Hunter:<UjLySq8f@9xfv79@straydogsyndicationsclu.5zu61.mongodb.net/?retryWrites=true&w=majority&appName=StrayDogSyndicationsCluster02
 PORT=5001
 ```
 
@@ -233,6 +231,8 @@ npm start
 Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 Copyright © 2024 StrayDog. All rights reserved.
 
