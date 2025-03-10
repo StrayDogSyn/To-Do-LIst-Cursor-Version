@@ -146,6 +146,7 @@ A sophisticated, full-stack todo list application featuring a stunning black and
 1. Clone the repository:
 
 [Clone the repository](https://github.com/StrayDogSyn/To-Do-LIst-Cursor-Version.git)
+
 ```bash
 git clone https://github.com/StrayDogSyn/To-Do-LIst-Cursor-Version.git
 cd full-stack-ToDoList-Hunter
