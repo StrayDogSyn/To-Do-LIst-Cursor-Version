@@ -16,7 +16,7 @@ module.exports = {
       animation: {
         'fade-in': 'fadeIn 0.3s ease-out forwards',
         'slide-in': 'slideIn 0.3s ease-out forwards',
-        'slide-out': 'slideOut 0.3s ease-in forwgit iniards',
+        'slide-out': 'slideOut 0.3s ease-in forwards', // Fixed typo
       },
       keyframes: {
         fadeIn: {
@@ -42,4 +42,4 @@ module.exports = {
     },
   },
   plugins: [],
-} 
+}

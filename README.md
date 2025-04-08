@@ -4,20 +4,38 @@ A sophisticated, full-stack todo list application featuring a stunning black and
 
 ![StrayDog Todo List Banner](./frontend/src/assets/app-preview.png)
 
+## Table of Contents
+
 ## 📋 Table of Contents
 
-- [Key Features](#-key-features)
-- [Project Structure](#-project-structure)
-- [Live Demo](#-live-demo)
-- [Technologies Used](#️-technologies-used)
-- [Installation & Setup](#-installation--setup)
-- [Screenshots](#-screenshots)
-- [API Endpoints](#-api-endpoints)
-- [Future Enhancements](#-future-enhancements)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Acknowledgments](#-acknowledgments)
-- [Contact](#-contact)
+- [✨ StrayDog Todo List Application](#-straydog-todo-list-application)
+  - [Table of Contents](#table-of-contents)
+  - [📋 Table of Contents](#-table-of-contents)
+  - [Key Features](#key-features)
+  - [🌟 Key Features](#-key-features)
+  - [📁 Project Structure](#-project-structure)
+  - [🚀 Live Demo](#-live-demo)
+  - [🛠️ Technologies Used](#️-technologies-used)
+    - [Frontend](#frontend)
+    - [Backend](#backend)
+  - [📦 Installation \& Setup](#-installation--setup)
+    - [Prerequisites](#prerequisites)
+    - [Backend Setup](#backend-setup)
+    - [Backend Configuration](#backend-configuration)
+    - [Frontend Setup](#frontend-setup)
+  - [📱 Screenshots](#-screenshots)
+    - [Application Overview](#application-overview)
+    - [Task Management Interface](#task-management-interface)
+    - [Task Creation Form](#task-creation-form)
+    - [Task Filtering and Sorting](#task-filtering-and-sorting)
+  - [🔄 API Endpoints](#-api-endpoints)
+  - [🎯 Future Enhancements](#-future-enhancements)
+  - [🤝 Contributing](#-contributing)
+  - [📄 License](#-license)
+  - [🙏 Acknowledgments](#-acknowledgments)
+  - [📞 Contact](#-contact)
+
+## Key Features
 
 ## 🌟 Key Features
 
@@ -143,55 +161,55 @@ A sophisticated, full-stack todo list application featuring a stunning black and
 
 ### Backend Setup
 
+### Backend Configuration
+
 1. Clone the repository:
 
-[Clone the repository](https://github.com/StrayDogSyn/To-Do-LIst-Cursor-Version.git)
-
-```bash
-git clone https://github.com/StrayDogSyn/To-Do-LIst-Cursor-Version.git
-cd full-stack-ToDoList-Hunter
-```
+   ```bash
+   git clone https://github.com/StrayDogSyn/To-Do-LIst-Cursor-Version.git
+   cd full-stack-ToDoList-Hunter
+   ```
 
 1. Install backend dependencies:
 
-```bash
-cd backend
-npm install
-```
+   ```bash
+   cd backend
+   npm install
+   ```
 
-1. Create a .env file (replace `your_mongodb_uri` with your actual MongoDB URI):
+1. Create a `.env` file in the `backend` directory with the following content:
 
-```env
-MONGODB_URI=mongodb+srv://Hunter:<UjLySq8f@9xfv79@straydogsyndicationsclu.5zu61.mongodb.net/?retryWrites=true&w=majority&appName=StrayDogSyndicationsCluster02
-PORT=5001
-```
+   ```env
+   MONGODB_URI=mongodb://<username>:<password>@<host>:<port>/<database>?retryWrites=true&w=majority
+   PORT=5001
+   ```
 
 1. Start the server:
 
-```bash
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
 
 ### Frontend Setup
 
 1. Install frontend dependencies:
 
-```bash
-cd frontend
-npm install
-```
+   ```bash
+   cd frontend
+   npm install
+   ```
 
 1. Create a .env file:
 
-```env
-REACT_APP_API_URL=http://localhost:5001
-```
+   ```env
+   REACT_APP_API_URL=http://localhost:5001
+   ```
 
 1. Start the development server:
 
-```bash
-npm start
-```
+   ```bash
+   npm start
+   ```
 
 ## 📱 Screenshots
 
@@ -234,8 +252,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-Copyright © 2024 StrayDog. All rights reserved.
 
 ## 🙏 Acknowledgments
 

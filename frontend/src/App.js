@@ -6,6 +6,8 @@ import TaskForm from './components/TaskForm';
 import TaskFilters from './components/TaskFilters';
 import Footer from './components/Footer';
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 function App() {
   const [tasks, setTasks] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -22,7 +24,7 @@ function App() {
 
   const checkServerConnection = async () => {
     try {
-      await axios.get(`${process.env.REACT_APP_API_URL}/health`);
+      await axios.get(`${API_URL}/health`);
       setServerConnected(true);
       setError('');
     } catch (err) {
@@ -36,14 +38,7 @@ function App() {
     checkServerConnection();
   }, []);
 
-  useEffect(() => {
-    if (serverConnected) {
-      fetchCategories();
-      fetchTasks();
-    }
-  }, [serverConnected, filters]);
-
-  const fetchTasks = async () => {
+  const fetchTasks = React.useCallback(async () => {
     try {
       const response = await axios.get(`${process.env.REACT_APP_API_URL}/tasks`, { params: filters });
       setTasks(response.data);
@@ -51,7 +46,14 @@ function App() {
       setError('Error fetching tasks. Please try again.');
       console.error('Error fetching tasks:', err);
     }
-  };
+  }, [filters]);
+
+  useEffect(() => {
+    if (serverConnected) {
+      fetchCategories();
+      fetchTasks();
+    }
+  }, [serverConnected, filters, fetchTasks]);
 
   const fetchCategories = async () => {
     try {
@@ -187,4 +189,4 @@ function App() {
   );
 }
 
-export default App; 
+export default App;
